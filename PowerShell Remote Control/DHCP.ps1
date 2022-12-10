@@ -7,7 +7,7 @@ $REMOTE_SERVER = 'server-1'
 # Connect to server-1
 Enter-PSSession $REMOTE_SERVER
 
-$ServerName = "dc1.ads.solarsubmarines.ie"
+$ServerName = "dc1.ads.jburns.ie"
 $ServerIPv4 = "172.28.76.1"
 
 # Install feature and configure

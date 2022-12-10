@@ -7,7 +7,7 @@ Run one line at a time, under supervision!
 Rename-Computer -NewName server-1
 # Check existing IP addresses
 Get-NetIPAddress
-# My interface index was #3, get an IP address from the lecturer, the range is 172.28.78.1-50
+# My interface index was #3, I was using a lan segment so could choose my own IP range
 New-NetIPAddress -InterfaceIndex 3 -IPAddress 172.28.78.200 -PrefixLength 22 -DefaultGateway 172.28.76.20
 # Set DC-1 as being the DNS
 Set-DnsClientServerAddress -InterfaceIndex 3 -ServerAddresses 172.28.78.100

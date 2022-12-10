@@ -2,7 +2,7 @@
 $ADUsers = Import-csv C:\Powershell\WT3\PGDipCLOD2022.csv
 
 # Typo in the domain name!!!!
-$Organisation = "DC=ads,DC=solarsubmaines,DC=com"
+$Organisation = "DC=ads,DC=jburns,DC=com"
 $Classgroup = "PGDipCLOD2022"
 
 # Add OUs for User and for this specific group
@@ -39,7 +39,7 @@ foreach ($User in $ADUsers)
             #Account will be created in the OU listed in the $OU variable in the CSV file     
             New-ADUser `
             -SamAccountName $Username `
-            -UserPrincipalName "$Username@ads.solarsubmaines.com" `
+            -UserPrincipalName "$Username@ads.jburns.com" `
             -Name "$Firstname $Lastname" `
             -GivenName $Firstname `
             -Surname $Lastname `
