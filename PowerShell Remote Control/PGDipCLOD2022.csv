@@ -1,0 +1,2 @@
+﻿Firstname,Lastname,Username,Department,Password,OU
+examplefirstname,examplelastname,L00000000,PGDipCLOD2022,Passw0rd,"OU=Users,OU=PGDipCLOD2022,DC=ads,DC=jburns,DC=com"

@@ -1,0 +1,44 @@
+#Assigns a name to a variable
+$Rubbish = 1, 2, "a", "££" 
+$Rubbish 
+#clears the contents of variable
+clear-variable -Name Rubbish 
+$Rubbish 
+#removes the variable
+Remove-Variable -Name Rubbish
+
+$Rubbish = 1, 2, "a", "££" 
+#Gets the type of the variable (e.g. arrays, integers, strings)
+$Rubbish.GetType()
+
+#Cast a variable so it has a fixed type
+[int]$Rubbish = 1 
+$Rubbish.GetType()
+
+#pass a string to a variable to convert it
+[int]$Rubbish = 1 
+$Rubbish = "123456789" 
+$Rubbish
+#powershell can't convert a string of letters to an integer
+[int]$Rubbish = 1 
+$Rubbish = "This will give you an error!" 
+$Rubbish
+#shows the date (US format)
+[datetime]$OGGI = "11/13/2022" 
+#shows date above in ddmmyyy
+$OGGI.ToString('dd-MM-yyyy')
+$OGGI 
+Get-Date -format dd/MM/yyyy
+Get-Date | Format-List
+#shows a date based on culture (I chose GB as closest)
+[dateTime]::Parse("08/07/2010",([Globalization.CultureInfo]::CreateSpecificCulture('en-GB')))
+
+#storing output
+$dir_listing = Get-ChildItem c:\ 
+$dir_listing
+#test if path exists
+test-path variable:\dir_listing
+
+#create and protect a variable
+New-Variable JensVariable -value 3.142 -description "PI with write-protection" -option ReadOnly 
+Get-Variable JensVariable
