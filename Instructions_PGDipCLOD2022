@@ -1,0 +1,3 @@
+To use PDGipCLOD2022.ps1 you must have a csv file containing the relavent information. 
+A sample CSV file is included and must be populated and saved in the same location as the PowerShell file. 
+The file extracts information from the CSV file and uses that information to create Active Directory users and groups.
